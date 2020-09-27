@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RankingViewController.swift
 //  TapNumber
 //
 //  Created by チップまん on 2020/09/28.
@@ -8,13 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RankingViewController: UIViewController {
+    
+    let defaults: UserDefaults = UserDefaults.standard
+        
+    var number: Int = 0
+    var number1: Int = 0
+    var number2: Int = 0
+    var number3: Int = 0
+
+    @IBOutlet var RankLabel1:UILabel!
+    @IBOutlet var RankLabel2:UILabel!
+    @IBOutlet var RankLabel3:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        RankLabel1.text = String(defaults.integer(forKey: "score1"))
+        RankLabel2.text = String(defaults.integer(forKey: "score2"))
+        RankLabel3.text = String(defaults.integer(forKey: "score3"))
+        }
 
         // Do any additional setup after loading the view.
-    }
     
 
     /*

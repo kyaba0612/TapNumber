@@ -1,21 +1,35 @@
 //
-//  ViewController.swift
+//  ResultViewController.swift
 //  TapNumber
 //
-//  Created by チップまん on 2020/09/28.
+//  Created by チップまん on 2020/09/27.
 //  Copyright © 2020 com.litech. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ResultViewController: UIViewController {
 
+    var number: Int = 0
+      
+    let defaults: UserDefaults = UserDefaults.standard
+
+    @IBOutlet var ResultScore: UILabel!
+      
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+          
+        ResultScore.text = String(number)
+          
+         
+          // Do any additional setup after loading the view.
+      }
     
+    @IBAction func goBackToGame(){
+          self.dismiss(animated: true, completion: nil)
+          
+      }
 
     /*
     // MARK: - Navigation
